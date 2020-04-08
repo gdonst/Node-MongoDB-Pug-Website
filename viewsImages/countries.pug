@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+    h1 Countries with photos
+    div.photo
+        each image in imageData
+            ul.photos
+                a(href=`/travel/photos/${image._id}`)
+                    li= image._id + " [" + image.count + "]"

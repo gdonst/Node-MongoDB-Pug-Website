@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+    h1 Countries with photos
+    div.photolist
+        each image in imageData
+            div
+                a(href=`/travel/photo/${image.id}`)
+                    img(src=`/travel-images/${image.filename}` width='100')

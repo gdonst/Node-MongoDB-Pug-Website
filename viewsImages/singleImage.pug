@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+    main.photo
+        each image in imageData
+            div
+                img(src=`/static/travel-images/${image.filename}`)
+            div
+                h1= image.title
+                h2= image.location.city + ", " + image.location.country
+                h2= image.user.firstname + " " + image.user.lastname
+                p= image.description
